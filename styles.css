@@ -429,4 +429,85 @@ footer {
     .hero-image { order: -1; margin-bottom: 20px; }
     .footer-content { flex-direction: column; text-align: center; gap: 20px; }
     .footer-links { text-align: center; }
+
+}
+
+/* SPECIFICI PAGINA CHI SIAMO */
+
+.page-banner {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.active-link {
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Philosophy Grid */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.phil-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.phil-item h4 {
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+/* Staff Grid */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.staff-card {
+    text-align: center;
+}
+
+.staff-img img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 5px solid var(--bg-light);
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover .staff-img img {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+.staff-card h3 {
+    margin-bottom: 5px;
+    color: var(--text-dark);
+}
+
+.staff-card span {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments per Chi Siamo */
+@media (max-width: 768px) {
+    .page-banner h1 { font-size: 2.2rem; }
 }
