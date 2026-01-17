@@ -472,3 +472,24 @@ footer {
     .footer-content { flex-direction: column; text-align: center; gap: 20px; }
     .page-banner h1 { font-size: 2.2rem; }
 }
+
+/* --- Ottimizzazione foto struttura in Home Page su Mobile --- */
+@media (max-width: 768px) {
+    /* ... altre regole già presenti ... */
+
+    .home-about-layout {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .home-about-layout .image-stack {
+        order: -1; /* Forza l'immagine a stare sopra il testo */
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .home-about-layout .image-stack img {
+        margin: 0 auto;
+        box-shadow: 10px 10px 0px var(--accent); /* Riduce l'ombra su mobile per non debordare */
+    }
+}
