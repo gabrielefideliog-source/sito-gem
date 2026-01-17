@@ -1,4 +1,6 @@
-/* VARIABILI & RESET */
+/* =========================================
+   1. VARIABILI & RESET
+   ========================================= */
 :root {
     --primary: #E07A5F;    /* Terracotta */
     --secondary: #81B29A;  /* Sage Green */
@@ -51,7 +53,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .section-padding { padding: 80px 0; }
 .text-center { text-align: center; }
-.bg-cream { background-color: #fff; } /* Alternanza visiva */
+.bg-cream { background-color: #fff; }
 .highlight { color: var(--primary); }
 
 /* BUTTONS */
@@ -87,7 +89,9 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--white);
 }
 
-/* HEADER */
+/* =========================================
+   2. HEADER & MENU
+   ========================================= */
 .header {
     background-color: var(--white);
     padding: 15px 0;
@@ -116,7 +120,12 @@ img { max-width: 100%; height: auto; display: block; }
     font-size: 1rem;
     transition: color 0.3s;
 }
-.nav-link:hover { color: var(--primary); }
+.nav-link:hover, .active-link { 
+    color: var(--primary) !important; 
+}
+.active-link {
+    border-bottom: 2px solid var(--primary);
+}
 
 .btn-cta-nav {
     background-color: var(--secondary);
@@ -128,7 +137,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .btn-cta-nav:hover { background-color: #6a9681; }
 
-/* HAMBURGER */
 .hamburger {
     display: none;
     background: none;
@@ -144,7 +152,9 @@ img { max-width: 100%; height: auto; display: block; }
     transition: all 0.3s ease-in-out;
 }
 
-/* HERO SECTION */
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
 .hero {
     background-color: var(--bg-light);
     padding-top: 60px;
@@ -192,7 +202,9 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
 }
 
-/* SERVIZI */
+/* =========================================
+   4. SERVIZI & ATTIVITÀ
+   ========================================= */
 .section-title {
     font-size: 2.5rem;
     color: var(--text-dark);
@@ -245,44 +257,6 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
 }
 
-/* WHY US */
-.split-layout {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
-.image-stack img {
-    border-radius: var(--radius);
-    box-shadow: 20px 20px 0px var(--accent);
-}
-.content-stack { flex: 1; }
-.subtitle {
-    color: var(--primary);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-.benefits-list { margin-top: 30px; }
-.benefits-list li {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-.check-icon {
-    color: var(--secondary);
-    font-weight: bold;
-    font-size: 1.2rem;
-    background: #e3f5ed;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-/* ATTIVITA */
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -303,136 +277,9 @@ img { max-width: 100%; height: auto; display: block; }
 .act-text { padding: 25px; }
 .act-text h4 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
 
-/* FAQ ACCORDION */
-.narrow-container { max-width: 800px; margin: 0 auto; }
-.accordion { margin-top: 40px; }
-.accordion-item {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-.accordion-header {
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    padding: 20px 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.accordion-header .icon {
-    font-size: 1.5rem;
-    color: var(--primary);
-    transition: transform 0.3s;
-}
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    padding-right: 20px;
-}
-.accordion-content p { padding-bottom: 20px; color: #555; }
-
-/* Stato attivo Accordion */
-.accordion-header.active .icon { transform: rotate(45deg); }
-.accordion-header.active { color: var(--primary); }
-
-/* CONTATTI & FOOTER */
-.contact-banner {
-    background-color: var(--secondary);
-    color: var(--white);
-    padding: 80px 0;
-}
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-.contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
-.contact-info address {
-    font-style: normal;
-    margin-top: 30px;
-    font-size: 1.1rem;
-}
-.contact-info address p { margin-bottom: 15px; }
-.fake-map {
-    width: 100%;
-    height: 300px;
-    background-color: #eee;
-    color: #888;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: var(--radius);
-}
-
-footer {
-    background-color: var(--text-dark);
-    color: var(--white);
-    padding: 50px 0 20px;
-}
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 30px;
-    margin-bottom: 20px;
-}
-.footer-logo h3 { font-size: 1.5rem; color: var(--accent); }
-.footer-links { text-align: right; }
-.social-icons a {
-    color: var(--white);
-    margin-left: 15px;
-    font-weight: bold;
-}
-.footer-bottom { text-align: center; font-size: 0.9rem; opacity: 0.7; }
-
-/* MEDIA QUERIES (MOBILE) */
-@media (max-width: 768px) {
-    .hamburger { display: block; z-index: 1001; }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        gap: 0;
-        flex-direction: column;
-        background-color: var(--bg-light);
-        width: 100%;
-        height: 100vh; /* Fallback */
-        height: 100dvh;
-        text-align: center;
-        transition: 0.3s;
-        padding-top: 100px;
-    }
-    
-    .nav-menu.active { left: 0; }
-    
-    .nav-menu ul {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    /* Trasformazione Hamburger */
-    .hamburger.active .bar:nth-child(2) { opacity: 0; }
-    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-    .hero h1 { font-size: 2.5rem; }
-    .hero-grid, .split-layout, .contact-grid { grid-template-columns: 1fr; }
-    .hero-image { order: -1; margin-bottom: 20px; }
-    .footer-content { flex-direction: column; text-align: center; gap: 20px; }
-    .footer-links { text-align: center; }
-}
-
-/* SPECIFICI PAGINA CHI SIAMO */
-
+/* =========================================
+   5. LAYOUT "CHI SIAMO" & STORIA
+   ========================================= */
 .page-banner {
     background-color: var(--secondary);
     color: var(--white);
@@ -445,82 +292,41 @@ footer {
     margin-bottom: 10px;
 }
 
-.active-link {
-    color: var(--primary) !important;
-    border-bottom: 2px solid var(--primary);
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
 }
 
-/* Philosophy Grid */
-.philosophy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+.image-stack img {
+    border-radius: var(--radius);
+    box-shadow: 20px 20px 0px var(--accent);
 }
 
-.phil-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
+.content-stack { flex: 1; }
 
-.phil-item h4 {
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-/* Staff Grid */
-.staff-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.staff-card {
-    text-align: center;
-}
-
-.staff-img img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    object-fit: cover;
-    border: 5px solid var(--bg-light);
-    transition: transform 0.3s ease;
-}
-
-.staff-card:hover .staff-img img {
-    transform: scale(1.05);
-    border-color: var(--accent);
-}
-
-.staff-card h3 {
-    margin-bottom: 5px;
-    color: var(--text-dark);
-}
-
-.staff-card span {
+.subtitle {
     color: var(--primary);
     font-weight: 700;
+    text-transform: uppercase;
     font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
-/* Responsive adjustments per Chi Siamo */
-@media (max-width: 768px) {
-    .page-banner h1 { font-size: 2.2rem; }
-}
-
-
-/* GRIGLIA TEAM OTTIMIZZATA */
+/* =========================================
+   6. GRIGLIA TEAM (OTTIMIZZATA)
+   ========================================= */
 .staff-grid-new {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonne su Desktop */
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-top: 50px;
 }
 
 .staff-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background: var(--white);
     padding: 30px 20px;
@@ -538,7 +344,7 @@ footer {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; /* Centrata perfettamente */
     border: 4px solid var(--secondary);
 }
 
@@ -554,7 +360,6 @@ footer {
     display: block;
 }
 
-/* BANNER SICUREZZA */
 .certifications-banner {
     background-color: var(--text-dark);
     color: var(--white);
@@ -568,21 +373,102 @@ footer {
     margin-bottom: 15px;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   7. FAQ, CONTATTI & FOOTER
+   ========================================= */
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.accordion-header.active { color: var(--primary); }
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.contact-banner {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 80px 0;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 50px 0 20px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 30px;
+}
+.footer-bottom { text-align: center; padding-top: 20px; font-size: 0.9rem; opacity: 0.7; }
+
+/* =========================================
+   8. MEDIA QUERIES (RESPONSIVE)
+   ========================================= */
+
 @media (max-width: 992px) {
-    .staff-grid-new {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne su tablet */
-    }
+    .staff-grid-new { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
-    .staff-grid-new {
-        grid-template-columns: 1fr; /* 1 colonna su mobile */
+    /* Menu Mobile */
+    .hamburger { display: block; z-index: 1001; }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--bg-light);
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        padding-top: 100px;
     }
-    
-    .staff-photo {
-        width: 130px;
-        height: 130px;
-    }
-}
+    .nav-menu.active { left: 0; }
+    .nav-menu ul { flex-direction: column; gap: 30px; }
 
+    /* Layout Generale Mobile */
+    .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.5rem; }
+    
+    /* FIX SEZIONE STORIA MOBILE: Immagine sopra il testo */
+    .story-layout {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .story-layout .image-stack {
+        order: -1; 
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .story-layout .content-stack { width: 100%; }
+    .story-layout .image-stack img { margin: 0 auto; box-shadow: 10px 10px 0px var(--accent); }
+
+    /* Team & Footer Mobile */
+    .staff-grid-new { grid-template-columns: 1fr; }
+    .staff-photo { width: 130px; height: 130px; }
+    .footer-content { flex-direction: column; text-align: center; gap: 20px; }
+    .page-banner h1 { font-size: 2.2rem; }
+}
